@@ -1,0 +1,58 @@
+@import 'bootstrap/bootstrap';
+@import 'fontawesome/fontawesome';
+@import 'fontawesome/solid';
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: $body-bg;
+  color: $gray-200;
+}
+
+.coin-pic {
+  width: 25px;
+}
+
+.v-50 {
+  position: relative;
+  top: 31px;
+  transform: translateY(-50%);
+}
+
+.section-heading {
+  background-color: rgba(255, 255, 255, .1);
+  padding: 1.2rem 1rem;
+}
+
+.tab-buttons {
+  position: relative;
+  background-color: rgba(255, 255, 255, .1);
+  .tab-button {
+    color: $gray-200;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+    }
+    &.active {
+      background-color: $body-bg;
+      &::after {
+        background-color: #17a2b8;
+      }
+    }
+    &:hover {
+      text-decoration: none;
+      color: $gray-200;
+    }
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
