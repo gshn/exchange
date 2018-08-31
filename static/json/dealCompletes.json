@@ -1,0 +1,26 @@
+{
+  "dealCompletes": [
+    {
+      "id": 2,
+      "time": "08/15 15:58:04",
+      "pair": "btc/qtum",
+      "dir": "매수",
+      "price": 1,
+      "amount": 0.6294,
+      "dealAmount": 0,
+      "average": 0,
+      "status": "취소됨"
+    },
+    {
+      "id": 1,
+      "time": "08/15 15:56:54",
+      "pair": "btc/qtum",
+      "dir": "매도",
+      "price": 6306.84,
+      "amount": 0.0001,
+      "dealAmount": 0.00010000,
+      "average": 6306.87,
+      "status": "체결"
+    }
+  ]
+}

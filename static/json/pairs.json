@@ -1,0 +1,125 @@
+{
+  "pairs": [
+    {
+      "market": "btc/qtum",
+      "coinText": "비트코인",
+      "coin": "btc",
+      "baseCoin": "qtum",
+      "price": 1428.1044,
+      "yesterdayPrice": 1495.450014,
+      "highestPrice": 1440.71005,
+      "lowestPrice": 1385.25948216,
+      "amount": 0.10224114
+    },
+    {
+      "market": "ltc/qtum",
+      "coinText": "라이트코인",
+      "coin": "ltc",
+      "baseCoin": "qtum",
+      "price": 12.63428840,
+      "yesterdayPrice": 12.77421232,
+      "highestPrice": 12.77421232,
+      "lowestPrice": 12.61027688,
+      "amount": 3.55045398
+    },
+    {
+      "market": "eth/qtum",
+      "coinText": "이더리움",
+      "coin": "eth",
+      "baseCoin": "qtum",
+      "price": 64.7975,
+      "yesterdayPrice": 64.41245235,
+      "highestPrice": 66.31554770,
+      "lowestPrice": 62.62788600,
+      "amount": 3.55045398
+    },
+    {
+      "market": "etc/qtum",
+      "coinText": "이더리움클래식",
+      "coin": "etc",
+      "baseCoin": "qtum",
+      "price": 2.98,
+      "yesterdayPrice": 2.96615880,
+      "highestPrice": 3.00458340,
+      "lowestPrice": 2.68255001,
+      "amount": 22.01855331
+    },
+    {
+      "market": "bch/btc",
+      "coinText": "비트코인캐시",
+      "coin": "bch",
+      "baseCoin": "btc",
+      "price": 0.09011000,
+      "yesterdayPrice": 0.09498090,
+      "highestPrice": 0.08312220,
+      "lowestPrice": 0.08189220,
+      "amount": 7.43981504
+    },
+    {
+      "market": "ltc/btc",
+      "coinText": "라이트코인",
+      "coin": "ltc",
+      "baseCoin": "btc",
+      "price": 0.00899545,
+      "yesterdayPrice": 0.00899000,
+      "highestPrice": 0.00924534,
+      "lowestPrice": 0.00899000,
+      "amount": 3.55045398
+    },
+    {
+      "market": "eth/btc",
+      "coinText": "이더리움",
+      "coin": "eth",
+      "baseCoin": "btc",
+      "price": 0.04752438,
+      "yesterdayPrice": 0.04715423,
+      "highestPrice": 0.04752438,
+      "lowestPrice": 0.04676165,
+      "amount": 3.55045398
+    },
+    {
+      "market": "etc/btc",
+      "coinText": "이더리움클래식",
+      "coin": "etc",
+      "baseCoin": "btc",
+      "price": 0.00210414,
+      "yesterdayPrice": 0.00210414,
+      "highestPrice": 0.00229976,
+      "lowestPrice": 0.00210414,
+      "amount": 22.01855331
+    },
+    {
+      "market": "wax/btc",
+      "coinText": "왁스",
+      "coin": "wax",
+      "baseCoin": "btc",
+      "price": 0.00001063,
+      "yesterdayPrice": 0.00001071,
+      "highestPrice": 0.00001175,
+      "lowestPrice": 0.00001025,
+      "amount": 29194.71967755
+    },
+    {
+      "market": "qtum/usdt",
+      "coinText": "퀀텀",
+      "coin": "qtum",
+      "baseCoin": "usdt",
+      "price": 4.49,
+      "yesterdayPrice": 4.42,
+      "highestPrice": 4.95,
+      "lowestPrice": 3.75,
+      "amount": 29194.71967755
+    },
+    {
+      "market": "btc/usdt",
+      "coinText": "비트코인",
+      "coin": "btc",
+      "baseCoin": "usdt",
+      "price": 6362.87,
+      "yesterdayPrice": 6358.22,
+      "highestPrice": 6432.89,
+      "lowestPrice": 6300.00,
+      "amount": 11.8263
+    }
+  ]
+}

@@ -29,25 +29,25 @@
           </li>
           <li class="list-inline-item ml-3">
             <div class="v-50">
-              <small class="text-muted">{{ lang.yesterdayRate }}</small>
+              <small class="text-muted">{{ langs.yesterdayRate }}</small>
               <p :class="rateSign === '+' ? 'text-danger' : 'text-primary'" class="m-0">{{ yesterdayRate }}</p>
             </div>
           </li>
           <li class="list-inline-item ml-3">
             <div class="v-50">
-              <small class="text-muted">{{ lang.highestPrice }}</small>
+              <small class="text-muted">{{ langs.highestPrice }}</small>
               <p class="m-0">{{ highestPrice }}</p>
             </div>
           </li>
           <li class="list-inline-item ml-3">
             <div class="v-50">
-              <small class="text-muted">{{ lang.lowestPrice }}</small>
+              <small class="text-muted">{{ langs.lowestPrice }}</small>
               <p class="m-0">{{ lowestPrice }}</p>
             </div>
           </li>
           <li class="list-inline-item ml-3">
             <div class="v-50">
-              <small class="text-muted">{{ lang.tradeAmount }}</small>
+              <small class="text-muted">{{ langs.tradeAmount }}</small>
               <p class="m-0 text-uppercase">{{ amount }} {{ coin }}</p>
             </div>
           </li>
@@ -57,17 +57,17 @@
         <ul class="list-inline">
           <li class="list-inline-item">
             <div class="v-50">
-              <router-link to="">{{ lang.login }}</router-link>
+              <router-link to="">{{ langs.login }}</router-link>
             </div>
           </li>
           <li class="list-inline-item ml-3">
             <div class="v-50">
-              <router-link to="">{{ lang.register }}</router-link>
+              <router-link to="">{{ langs.register }}</router-link>
             </div>
           </li>
           <li class="list-inline-item ml-3">
             <div class="v-50">
-              <router-link to="">{{ lang.language }}</router-link>
+              <router-link to="">{{ langs.language }}</router-link>
             </div>
           </li>
         </ul>
@@ -81,7 +81,7 @@
           </a>
         </nav>
         <ul class="list-group">
-          <li class="list-group-item cursor-pointer" v-for="pair in pairs" v-bind:key="pair.market" v-if="pair.visible" :class="{ active: pair.isActive }"  v-on:click="changeMarket(pair.market)">
+          <li class="list-group-item cursor-pointer" v-for="pair in pairs" v-bind:key="pair.market" v-show="pair.visible" :class="{ active: pair.isActive }"  v-on:click="changeMarket(pair.market)">
             <a class="d-flex text-white" href="javascript:;">
               <div class="w-25 p-1 text-center">
                 <img class="coin-pic" :alt="pair.coin" :src="coinImage(pair.coin)">
@@ -108,13 +108,13 @@
             <section class="deal-record bg">
               <nav class="tab-buttons">
                 <a class="tab-button text-center p-3 d-inline-block" :class="{ active: tabDealNoComplete }" href="javascript:;" v-on:click="changeDealTab(0)">
-                  {{ lang.dealNoComplete }}
+                  {{ langs.dealNoComplete }}
                 </a>
                 <a class="tab-button text-center p-3 d-inline-block" :class="{ active: tabDealComplete }" href="javascript:;" v-on:click="changeDealTab(1)">
-                  {{ lang.dealComplete }}
+                  {{ langs.dealComplete }}
                 </a>
                 <a class="tab-button text-center p-3 d-inline-block" :class="{ active: tabCoinRecharge }" href="javascript:;" v-on:click="changeDealTab(2)">
-                  {{ lang.coinRecharge }}
+                  {{ langs.coinRecharge }}
                 </a>
               </nav>
               <div class="tab-content px-3">
@@ -122,14 +122,14 @@
                   <table class="table table-sm table-borderless small">
                     <thead>
                       <tr class="text-muted">
-                        <th>{{ lang.time }}</th>
-                        <th>{{ lang.pair }}</th>
-                        <th>{{ lang.dir }}</th>
-                        <th>{{ lang.price }}</th>
-                        <th>{{ lang.amount }}</th>
-                        <th>{{ lang.deal }}</th>
-                        <th>{{ lang.percent }}</th>
-                        <th>{{ lang.opera }}</th>
+                        <th>{{ langs.time }}</th>
+                        <th>{{ langs.pair }}</th>
+                        <th>{{ langs.dir }}</th>
+                        <th>{{ langs.price }}</th>
+                        <th>{{ langs.amount }}</th>
+                        <th>{{ langs.deal }}</th>
+                        <th>{{ langs.percent }}</th>
+                        <th>{{ langs.opera }}</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -156,7 +156,7 @@
                           {{ dealNoComplete.percent.toFixed(2) }}
                         </td>
                         <td>
-                          <a href="">{{ lang.cancel }}</a>
+                          <a href="">{{ langs.cancel }}</a>
                         </td>
                       </tr>
                     </tbody>
@@ -166,15 +166,15 @@
                   <table class="table table-sm table-borderless small">
                     <thead>
                       <tr class="text-muted">
-                        <th>{{ lang.time }}</th>
-                        <th>{{ lang.pair }}</th>
-                        <th>{{ lang.dir }}</th>
-                        <th>{{ lang.price }}</th>
-                        <th>{{ lang.amount }}</th>
-                        <th>{{ lang.dealAmount }}</th>
-                        <th>{{ lang.average }}</th>
-                        <th>{{ lang.status }}</th>
-                        <th>{{ lang.opera }}</th>
+                        <th>{{ langs.time }}</th>
+                        <th>{{ langs.pair }}</th>
+                        <th>{{ langs.dir }}</th>
+                        <th>{{ langs.price }}</th>
+                        <th>{{ langs.amount }}</th>
+                        <th>{{ langs.dealAmount }}</th>
+                        <th>{{ langs.average }}</th>
+                        <th>{{ langs.status }}</th>
+                        <th>{{ langs.opera }}</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -204,7 +204,7 @@
                           {{ dealComplete.status }}
                         </td>
                         <td>
-                          <a href="">{{ lang.opera }}</a>
+                          <a href="">{{ langs.opera }}</a>
                         </td>
                       </tr>
                     </tbody>
@@ -214,12 +214,12 @@
                   <table class="table table-sm table-borderless small">
                     <thead>
                       <tr class="text-muted">
-                        <th>{{ lang.time }}</th>
-                        <th>{{ lang.coin }}</th>
-                        <th>{{ lang.dir }}</th>
-                        <th>{{ lang.amounts }}</th>
-                        <th>{{ lang.status }}</th>
-                        <th>{{ lang.opera }}</th>
+                        <th>{{ langs.time }}</th>
+                        <th>{{ langs.coin }}</th>
+                        <th>{{ langs.dir }}</th>
+                        <th>{{ langs.amounts }}</th>
+                        <th>{{ langs.status }}</th>
+                        <th>{{ langs.opera }}</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -240,7 +240,7 @@
                           {{ coinRecharge.status }}
                         </td>
                         <td>
-                          <a href="">{{ lang.opera }}</a>
+                          <a href="">{{ langs.opera }}</a>
                         </td>
                       </tr>
                     </tbody>
@@ -251,17 +251,17 @@
             <section class="deal-trade bg ml-1">
               <nav class="tab-buttons d-flex">
                 <a class="tab-button text-center p-3 d-block w-100" :class="{ active: tabDealBuy }" href="javascript:;" v-on:click="changeTradeTab(0)">
-                  {{ lang.buy }}
+                  {{ langs.buy }}
                 </a>
                 <a class="tab-button text-center p-3 d-block w-100" :class="{ active: tabDealSell }" href="javascript:;" v-on:click="changeTradeTab(1)">
-                  {{ lang.sell }}
+                  {{ langs.sell }}
                 </a>
               </nav>
               <div class="tab-content px-3">
                 <form class="tab-pane" :class="{ active: tabDealBuy }" v-on:submit.prevent="dealTrade('buy')">
                   <div class="d-flex pt-3">
                     <div class="deal-trade-label text-muted small">
-                      {{ lang.staticPrice }}
+                      {{ langs.staticPrice }}
                     </div>
                     <div class="deal-trade-input">
                       <div class="input-group">
@@ -283,7 +283,7 @@
                   </div>
                   <div class="d-flex pt-2">
                     <div class="deal-trade-label text-muted small">
-                      {{ lang.amounts }}
+                      {{ langs.amounts }}
                     </div>
                     <div class="deal-trade-input">
                       <div class="input-group">
@@ -305,13 +305,13 @@
                         </div>
                       </div>
                       <div class="form-text text-muted small">
-                        {{ lang.avaliable }} {{ buyAmountMax }}
+                        {{ langs.avaliable }} {{ buyAmountMax }}
                       </div>
                     </div>
                   </div>
                   <div class="d-flex pt-2">
                     <div class="deal-trade-label text-muted small">
-                      {{ lang.total }}
+                      {{ langs.total }}
                     </div>
                     <div class="deal-trade-input">
                       <div class="input-group">
@@ -326,14 +326,14 @@
                   </div>
                   <div class="pt-3">
                     <button class="btn btn-block btn-danger" type="submit">
-                      {{ lang.buy }}
+                      {{ langs.buy }}
                     </button>
                   </div>
                 </form>
                 <div class="tab-pane" :class="{ active: tabDealSell }">
                   <div class="d-flex pt-3">
                     <div class="deal-trade-label text-muted small">
-                      {{ lang.staticPrice }}
+                      {{ langs.staticPrice }}
                     </div>
                     <div class="deal-trade-input">
                       <div class="input-group">
@@ -349,7 +349,7 @@
                   </div>
                   <div class="d-flex pt-2">
                     <div class="deal-trade-label text-muted small">
-                      {{ lang.amounts }}
+                      {{ langs.amounts }}
                     </div>
                     <div class="deal-trade-input">
                       <div class="input-group">
@@ -371,13 +371,13 @@
                         </div>
                       </div>
                       <div class="form-text text-muted small">
-                        {{ lang.avaliable }} {{ sellAmountMax }}
+                        {{ langs.avaliable }} {{ sellAmountMax }}
                       </div>
                     </div>
                   </div>
                   <div class="d-flex pt-2">
                     <div class="deal-trade-label text-muted small">
-                      {{ lang.total }}
+                      {{ langs.total }}
                     </div>
                     <div class="deal-trade-input">
                       <div class="input-group">
@@ -392,7 +392,7 @@
                   </div>
                   <div class="pt-3">
                     <button class="btn btn-block btn-primary">
-                      {{ lang.sell }}
+                      {{ langs.sell }}
                     </button>
                   </div>
                 </div>
@@ -407,7 +407,7 @@
                 <i class="fas fa-fw fa-3x fa-wallet text-info"></i>
               </div>
               <div class="body p-2">
-                <small class="text-muted">{{ lang.assets }}</small>
+                <small class="text-muted">{{ langs.assets }}</small>
                 <h5 class="m-0 text-uppercase">{{ assets }} btc</h5>
                 <small class="text-uppercase">{{ assetsCash }}</small>
               </div>
@@ -418,10 +418,10 @@
                   <img class="coin-pic" :alt="coin" :src="coinImage(coin)">
                 </div>
                 <small class="d-block float-left pl-3 text-muted">
-                  {{ lang.avaliable }} <span class="text-uppercase">{{ coin }}</span>
+                  {{ langs.avaliable }} <span class="text-uppercase">{{ coin }}</span>
                 </small>
                 <small class="d-block float-right pt-2">
-                  <a href="javascript:;">{{ lang.deposit }}</a>
+                  <a href="javascript:;">{{ langs.deposit }}</a>
                 </small>
                 <small class="d-block float-left pl-3 text-uppercase">{{ member.assets[coin] }} {{ coin }}</small>
               </div>
@@ -430,10 +430,10 @@
                   <img class="coin-pic" :alt="baseCoin" :src="coinImage(baseCoin)">
                 </div>
                 <small class="d-block float-left pl-3 text-muted">
-                  {{ lang.avaliable }} <span class="text-uppercase">{{ baseCoin }}</span>
+                  {{ langs.avaliable }} <span class="text-uppercase">{{ baseCoin }}</span>
                 </small>
                 <small class="d-block float-right pt-2">
-                  <a href="">{{ lang.deposit }}</a>
+                  <a href="">{{ langs.deposit }}</a>
                 </small>
                 <small class="d-block float-left pl-3 text-uppercase">{{ member.assets[baseCoin] }} {{ baseCoin }}</small>
               </div>
@@ -445,13 +445,13 @@
               <thead>
                 <tr class="text-muted">
                   <th class="text-right">
-                    {{ lang.price }}(<span class="text-uppercase">{{ baseCoin }}</span>)
+                    {{ langs.price }}(<span class="text-uppercase">{{ baseCoin }}</span>)
                   </th>
                   <th class="text-right">
-                    {{ lang.amount }}(<span class="text-uppercase">{{ coin }}</span>)
+                    {{ langs.amount }}(<span class="text-uppercase">{{ coin }}</span>)
                   </th>
                   <th class="text-right">
-                    {{ lang.sum }}(<span class="text-uppercase">{{ baseCoin }}</span>)
+                    {{ langs.sum }}(<span class="text-uppercase">{{ baseCoin }}</span>)
                   </th>
                 </tr>
               </thead>
@@ -471,19 +471,19 @@
             </table>
           </section>
           <section class="recent bg mt-1">
-            <h6 class="m-0 section-heading">{{ lang.deal }}</h6>
+            <h6 class="m-0 section-heading">{{ langs.deal }}</h6>
             <table class="table table-sm table-borderless small">
               <thead>
                 <tr class="text-muted">
-                  <th>{{ lang.time }}</th>
+                  <th>{{ langs.time }}</th>
                   <th class="text-right">
-                    {{ lang.dealPrice }}(<span class="text-uppercase">{{ baseCoin }}</span>)
+                    {{ langs.dealPrice }}(<span class="text-uppercase">{{ baseCoin }}</span>)
                   </th>
                   <th class="text-right">
-                    {{ lang.dealAmount }}(<span class="text-uppercase">{{ coin }}</span>)
+                    {{ langs.dealAmount }}(<span class="text-uppercase">{{ coin }}</span>)
                   </th>
                   <th class="text-right">
-                    {{ lang.sum }}(<span class="text-uppercase">{{ baseCoin }}</span>)
+                    {{ langs.sum }}(<span class="text-uppercase">{{ baseCoin }}</span>)
                   </th>
                 </tr>
               </thead>
@@ -513,67 +513,13 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+import * as TYPES from '../store/mutation-types'
+
 export default {
   name: 'Exchange',
   data() {
     return {
-      lang: {
-        yesterdayRate: '전일대비',
-        highestPrice: '고가',
-        lowestPrice: '저가',
-        tradeAmount: '거래량',
-        login: '로그인',
-        register: '회원가입',
-        language: '한국어',
-        dealNoComplete: '미체결내역',
-        dealComplete: '체결내역',
-        coinRecharge: '입금내역',
-        cancel: '취소',
-        buy: '매수',
-        sell: '매도',
-        deposit: '입금',
-        withdraw: '출금',
-        assets: '보유자산 추정가치',
-        time: '시간',
-        pair: '마켓명',
-        dir: '거래유형',
-        price: '주문가격',
-        amount: '주문수량',
-        deal: '체결',
-        percent: '진도',
-        opera: '상세보기',
-        dealPrice: '체결가격',
-        dealAmount: '체결수량',
-        average: '체결평균가격',
-        status: '상태',
-        coin: '코인명',
-        amounts: '수량',
-        staticPrice: '지정가',
-        total: '주문총액',
-        avaliable: '주문가능',
-        sum: '합계',
-      },
-      baseCoins: [
-        'qtum', 'btc', 'usdt',
-      ],
-      cashUnit: 'krw',
-      buy: null,
-      sell: null,
-      buyCash: '≈ 0.00',
-      sellCash: '≈ 0.00',
-      buyAmount: null,
-      sellAmount: null,
-      selectedBaseCoin: null,
-      market: null,
-      coinText: null,
-      coin: null,
-      baseCoin: null,
-      price: 0,
-      yesterdayPrice: 0,
-      highestPrice: 0,
-      lowestPrice: 0,
-      amount: 0,
-      cashRate: 0,
       tabDealNoComplete: true,
       tabDealComplete: false,
       tabCoinRecharge: false,
@@ -581,228 +527,6 @@ export default {
       tabDealSell: false,
       dropdownBuyAmountPercent: false,
       dropdownSellAmountPercent: false,
-      pairs: [
-        {
-          market: 'btc/qtum',
-          coinText: '비트코인',
-          coin: 'btc',
-          baseCoin: 'qtum',
-          price: 1428.1044,
-          yesterdayPrice: 1495.450014,
-          highestPrice: 1440.71005,
-          lowestPrice: 1385.25948216,
-          amount: 0.10224114,
-          cashRate: 5167.47,
-        },
-        {
-          market: 'bch/qtum',
-          coinText: '비트코인캐시',
-          coin: 'bch',
-          baseCoin: 'qtum',
-          price: 118.34551154,
-          yesterdayPrice: 119.22015150,
-          highestPrice: 122.40176664,
-          lowestPrice: 110.23245213,
-          amount: 0.43981504,
-          cashRate: 5167.47,
-        },
-        {
-          market: 'ltc/qtum',
-          coinText: '라이트코인',
-          coin: 'ltc',
-          baseCoin: 'qtum',
-          price: 12.63428840,
-          yesterdayPrice: 12.77421232,
-          highestPrice: 12.77421232,
-          lowestPrice: 12.61027688,
-          amount: 3.55045398,
-          cashRate: 5167.47,
-        },
-        {
-          market: 'eth/qtum',
-          coinText: '이더리움',
-          coin: 'eth',
-          baseCoin: 'qtum',
-          price: 64.7975,
-          yesterdayPrice: 64.41245235,
-          highestPrice: 66.31554770,
-          lowestPrice: 62.62788600,
-          amount: 3.55045398,
-          cashRate: 5167.47,
-        },
-        {
-          market: 'etc/qtum',
-          coinText: '이더리움클래식',
-          coin: 'etc',
-          baseCoin: 'qtum',
-          price: 2.98,
-          yesterdayPrice: 2.96615880,
-          highestPrice: 3.00458340,
-          lowestPrice: 2.68255001,
-          amount: 22.01855331,
-          cashRate: 5167.47,
-        },
-        {
-          market: 'bch/btc',
-          coinText: '비트코인캐시',
-          coin: 'bch',
-          baseCoin: 'btc',
-          price: 0.09011000,
-          yesterdayPrice: 0.09498090,
-          highestPrice: 0.08312220,
-          lowestPrice: 0.08189220,
-          amount: 7.43981504,
-          cashRate: 7684759.3,
-        },
-        {
-          market: 'ltc/btc',
-          coinText: '라이트코인',
-          coin: 'ltc',
-          baseCoin: 'btc',
-          price: 0.00899545,
-          yesterdayPrice: 0.00899000,
-          highestPrice: 0.00924534,
-          lowestPrice: 0.00899000,
-          amount: 3.55045398,
-          cashRate: 7684759.3,
-        },
-        {
-          market: 'eth/btc',
-          coinText: '이더리움',
-          coin: 'eth',
-          baseCoin: 'btc',
-          price: 0.04752438,
-          yesterdayPrice: 0.04715423,
-          highestPrice: 0.04752438,
-          lowestPrice: 0.04676165,
-          amount: 3.55045398,
-          cashRate: 7684759.3,
-        },
-        {
-          market: 'etc/btc',
-          coinText: '이더리움클래식',
-          coin: 'etc',
-          baseCoin: 'btc',
-          price: 0.00210414,
-          yesterdayPrice: 0.00210414,
-          highestPrice: 0.00229976,
-          lowestPrice: 0.00210414,
-          amount: 22.01855331,
-          cashRate: 7684759.3,
-        },
-        {
-          market: 'wax/btc',
-          coinText: '왁스',
-          coin: 'wax',
-          baseCoin: 'btc',
-          price: 0.00001063,
-          yesterdayPrice: 0.00001071,
-          highestPrice: 0.00001175,
-          lowestPrice: 0.00001025,
-          amount: 29194.71967755,
-          cashRate: 7684759.3,
-        },
-        {
-          market: 'qtum/usdt',
-          coinText: '퀀텀',
-          coin: 'qtum',
-          baseCoin: 'usdt',
-          price: 4.49,
-          yesterdayPrice: 4.42,
-          highestPrice: 4.95,
-          lowestPrice: 3.75,
-          amount: 29194.71967755,
-          cashRate: 1159.3,
-        },
-        {
-          market: 'btc/usdt',
-          coinText: '비트코인',
-          coin: 'btc',
-          baseCoin: 'usdt',
-          price: 6362.87,
-          yesterdayPrice: 6358.22,
-          highestPrice: 6432.89,
-          lowestPrice: 6300.00,
-          amount: 11.8263,
-          cashRate: 1159.3,
-        },
-      ],
-      dealNoCompletes: [
-        {
-          id: 2,
-          time: '08/15 15:58:02',
-          pair: 'btc/qtum',
-          dir: '매수',
-          price: 1.00,
-          amount: 0.6294,
-          deal: 0.00000000,
-          percent: 0,
-        },
-        {
-          id: 1,
-          time: '08/15 15:58:03',
-          pair: 'btc/qtum',
-          dir: '매도',
-          price: 20000.00,
-          amount: 0.0029,
-          deal: 0.00000000,
-          percent: 0,
-        },
-      ],
-      dealCompletes: [
-        {
-          id: 2,
-          time: '08/15 15:58:04',
-          pair: 'btc/qtum',
-          dir: '매수',
-          price: 1,
-          amount: 0.6294,
-          dealAmount: 0,
-          average: 0,
-          status: '취소됨',
-        },
-        {
-          id: 1,
-          time: '08/15 15:56:54',
-          pair: 'btc/qtum',
-          dir: '매도',
-          price: 6306.84,
-          amount: 0.0001,
-          dealAmount: 0.00010000,
-          average: 6306.87,
-          status: '체결',
-        },
-      ],
-      coinRecharges: [
-        {
-          id: 2,
-          time: '08/15 15:51:12',
-          coin: 'btc',
-          dir: '입금',
-          amounts: 0.003,
-          status: '확인중',
-        },
-        {
-          id: 1,
-          time: '08/15 15:51:14',
-          coin: 'btc',
-          dir: '출금',
-          amounts: 0.003,
-          status: '완료',
-        },
-      ],
-      member: {
-        assets: {
-          qtum: 26.498487,
-          btc: 17.48978984,
-          bch: 10.4948309,
-          ltc: 84.5988900,
-          eth: 104.4928849,
-          etc: 400.5829800,
-          wax: 20000.40,
-          usdt: 9980.99,
-        },
-      },
       trades: [
         {
           price: 1145.37249284,
@@ -961,88 +685,70 @@ export default {
           amount: 0.00012359,
         },
       ],
-      recents: [
-        {
-          id: 11,
-          time: '16:53:27',
-          dir: '매도',
-          price: 1414.93423423,
-          amount: 0.0002,
-        },
-        {
-          id: 10,
-          time: '16:53:27',
-          dir: '매도',
-          price: 1414.93423423,
-          amount: 0.0002,
-        },
-        {
-          id: 9,
-          time: '16:53:27',
-          dir: '매도',
-          price: 1414.93423423,
-          amount: 0.0002,
-        },
-        {
-          id: 8,
-          time: '16:53:27',
-          dir: '매수',
-          price: 1414.93423423,
-          amount: 0.0002,
-        },
-        {
-          id: 7,
-          time: '16:53:27',
-          dir: '매도',
-          price: 1414.93423423,
-          amount: 0.0002,
-        },
-        {
-          id: 6,
-          time: '16:53:27',
-          dir: '매수',
-          price: 1414.93423423,
-          amount: 0.0002,
-        },
-        {
-          id: 5,
-          time: '16:53:27',
-          dir: '매도',
-          price: 1414.93423423,
-          amount: 0.0002,
-        },
-        {
-          id: 4,
-          time: '16:53:27',
-          dir: '매수',
-          price: 1414.93423423,
-          amount: 0.0002,
-        },
-        {
-          id: 3,
-          time: '16:53:27',
-          dir: '매도',
-          price: 1414.93423423,
-          amount: 0.0002,
-        },
-        {
-          id: 2,
-          time: '16:53:27',
-          dir: '매수',
-          price: 1414.93423423,
-          amount: 0.0002,
-        },
-        {
-          id: 1,
-          time: '16:53:27',
-          dir: '매수',
-          price: 1414.93423423,
-          amount: 0.0002,
-        },
-      ],
     }
   },
   computed: {
+    ...mapGetters([
+      'langs',
+      'cashUnit',
+      'cashRate',
+      'baseCoins',
+      'market',
+      'coinText',
+      'coin',
+      'baseCoin',
+      'price',
+      'yesterdayPrice',
+      'highestPrice',
+      'lowestPrice',
+      'amount',
+      'pairs',
+      'selectedBaseCoin',
+      'member',
+      'buyAmount',
+      'sellAmount',
+      'buyAmountMax',
+      'sellAmountMax',
+      'buyCash',
+      'sellCash',
+      'assets',
+      'dealNoCompletes',
+      'dealCompletes',
+      'coinRecharges',
+      'recents',
+    ]),
+    buy: {
+      get() {
+        return this.$store.state.buy
+      },
+      set(buy) {
+        this.$store.commit(TYPES.BUY, buy)
+      },
+    },
+    sell: {
+      get() {
+        return this.$store.state.sell
+      },
+      set(sell) {
+        this.$store.commit(TYPES.SELL, sell)
+      },
+    },
+    buyAmount: {
+      get() {
+        return this.$store.state.buyAmount
+      },
+      set(buyAmount) {
+        this.$store.commit(TYPES.BUY_AMOUNT, buyAmount)
+      },
+    },
+    sellAmount: {
+      get() {
+        return this.$store.state.sellAmount
+      },
+      set(sellAmount) {
+        this.$store.commit(TYPES.SELL_AMOUNT, sellAmount)
+      },
+    },
     subPrice() {
       return this.price - this.yesterdayPrice
     },
@@ -1061,66 +767,38 @@ export default {
     sellTotal() {
       return (this.sell * this.sellAmount).toFixed(8)
     },
-    buyAmountMax() {
-      return this.buy > 0 ? (Math.floor((this.member.assets[this.baseCoin] / this.buy) * 100000000) / 100000000).toFixed(8) : this.member.assets[this.baseCoin]
-    },
-    sellAmountMax() {
-      return this.member.assets[this.coin]
-    },
-    assets() {
-      let total = 0
-      for (const key in this.member.assets) {
-        if ({}.hasOwnProperty.call(this.member.assets, key)) {
-          if (key === 'btc') {
-            total += this.member.assets[key]
-          } else {
-            let pair = this.pairs.filter(c => c.market === `${key}/btc`)[0]
-            if (pair) {
-              total += this.member.assets[key] * pair.price
-            } else {
-              pair = this.pairs.filter(c => c.market === `btc/${key}`)[0]
-              if (pair.price > 0) total += this.member.assets[key] / pair.price
-            }
-          }
-        }
-      }
-
-      return total.toFixed(8)
-    },
     assetsCash() {
       return this.cash(this.assets)
     },
   },
   watch: {
-    selectedBaseCoin() {
-      this.changeBaseCoin(this.selectedBaseCoin)
-    },
-    market() {
-      this.changeMarket(this.market)
-    },
     buy() {
-      if (String(this.buy)[0] === '0' && !isNaN(Number(String(this.buy)[1]))) {
-        this.buy = String(this.buy).replace(/^0+/, '')
+      let buyPrice = this.buy
+      if (String(buyPrice)[0] === '0' && !isNaN(Number(String(buyPrice)[1]))) {
+        buyPrice = String(buyPrice).replace(/^0+/, '')
       }
 
-      if (!isNaN(Number(this.buy))) {
-        const buy = String(this.buy).split('.')
+      if (!isNaN(Number())) {
+        const buy = String(buyPrice).split('.')
 
         if (typeof buy[1] !== 'undefined' && buy[1].length > 8) {
-          this.buy = `${buy[0]}.${buy[1].slice(0, 8)}`
+          buyPrice = `${buy[0]}.${buy[1].slice(0, 8)}`
         }
 
-        this.buy = this.buy > 1000000000 ? 1000000000 : this.buy
-        this.buy = this.buy < 0 ? 0 : this.buy
-        this.buyCash = this.cash(this.buy)
+        buyPrice = buyPrice > 1000000000 ? 1000000000 : buyPrice
+        buyPrice = buyPrice < 0 ? 0 : buyPrice
+        this.$store.commit(TYPES.BUY_CASH, this.cash(buyPrice))
       } else {
-        this.buy = ''
+        buyPrice = ''
       }
+      this.$store.commit(TYPES.BUY, buyPrice)
+      this.$store.commit(TYPES.BUY_AMOUNT_MAX, this.member.assets)
     },
     sell() {
-      this.sell = this.sell > 1000000000 ? 1000000000 : this.sell
-      this.sell = this.sell < 0 ? 0 : this.sell
-      this.sellCash = this.cash(this.sell)
+      let sellPrice = this.sell
+      sellPrice = sellPrice > 1000000000 ? 1000000000 : sellPrice
+      sellPrice = sellPrice < 0 ? 0 : sellPrice
+      this.$store.commit(TYPES.SELL_CASH, this.cash(sellPrice))
       this.validSellAmount()
     },
     buyAmount() {
@@ -1137,37 +815,19 @@ export default {
     },
   },
   methods: {
+    changeBaseCoin(selectedBaseCoin) {
+      this.$store.commit(TYPES.CHANGE_BASE_COIN, selectedBaseCoin)
+    },
     coinImage(coin) {
       return `/static/img/coin/${coin}.png`
     },
     cash(price) {
       return `≈ ${(price * this.cashRate).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')} ${this.cashUnit}`
     },
-    changeBaseCoin(selectedBaseCoin) {
-      for (const pair of this.pairs) {
-        pair.visible = pair.baseCoin === selectedBaseCoin
-      }
-
-      this.selectedBaseCoin = selectedBaseCoin
-    },
     changeMarket(market) {
-      for (const pair of this.pairs) {
-        if (pair.market === market) {
-          pair.isActive = true
-          this.coinText = pair.coinText
-          this.market = pair.market
-          this.coin = pair.coin
-          this.baseCoin = pair.baseCoin
-          this.price = pair.price
-          this.yesterdayPrice = pair.yesterdayPrice
-          this.highestPrice = pair.highestPrice
-          this.lowestPrice = pair.lowestPrice
-          this.amount = pair.amount
-          this.cashRate = pair.cashRate
-        } else {
-          pair.isActive = false
-        }
-      }
+      this.$store.commit(TYPES.MARKET, market)
+      this.$store.commit(TYPES.BUY_AMOUNT_MAX, this.member.assets)
+      this.$store.commit(TYPES.SELL_AMOUNT_MAX, this.member.assets)
     },
     changeDealTab(tab) {
       this.tabDealNoComplete = tab === 0
@@ -1207,9 +867,17 @@ export default {
       return dir
     },
   },
+  created() {
+    this.$store.dispatch('asyncLangs', window.navigator.language.slice(0, 2) || 'en')
+    this.$store.dispatch('asyncBaseCoins')
+    this.$store.dispatch('asyncPairs')
+    this.$store.dispatch('asyncMember')
+    this.$store.dispatch('asyncDealNoCompletes')
+    this.$store.dispatch('asyncDealCompletes')
+    this.$store.dispatch('asyncCoinRecharges')
+    this.$store.dispatch('asyncRecents')
+  },
   mounted() {
-    this.selectedBaseCoin = 'qtum'
-    this.market = 'btc/qtum'
   },
 }
 </script>
